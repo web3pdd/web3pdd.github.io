@@ -83,6 +83,32 @@
       background-color: #007bff;
       color: #fff;
     }
+
+    @media (max-width: 1000px) {
+
+
+      .photo {
+        width: 16rem;
+        height: 16rem;
+      }
+
+
+      .info p {
+        font-size: 1.8rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .lang-switch button {
+        font-size: 2rem;
+        padding: 20px 24px;
+        flex: 1 1 auto;
+      }
+
+
+    }
   </style>
 </head>
 <body>
@@ -239,18 +265,12 @@
       btnEn.classList.add('active');
       btnRu.classList.remove('active');
       titleEl.textContent = 'Web3 Developer';
-      nameEl.innerHTML = "<p><span class='highlight'>Name:</span> Pavel Deshevov</p>";
-      locationEl.innerHTML = "<span class='highlight'>Location:</span> Moscow, Russia";
-      languagesEl.innerHTML = "<span class='highlight'>Languages:</span> Russian (native), English (B2)";
     } else {
       en.style.display = 'none';
       ru.style.display = 'block';
       btnEn.classList.remove('active');
       btnRu.classList.add('active');
       titleEl.textContent = 'Web3 Разработчик';
-      nameEl.innerHTML = "<p><span class='highlight'>Имя:</span> Павел Дешевов</p>";
-      locationEl.innerHTML = "<span class='highlight'>Город:</span> Москва, Россия";
-      languagesEl.innerHTML = "<span class='highlight'>Языки:</span> Русский (родной), Английский (B2)";
     }
   }
 </script>
