@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Web3 Developer</title>
+  <title>Web3 Resume</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,9 +30,8 @@
     }
 
     .photo {
-      flex-shrink: 0;
-      width: 240px;
-      height: 240px;
+      width: 200px;
+      height: 220px;
       border-radius: 15%;
       background-color: #ddd;
       background-size: cover;
@@ -44,29 +43,22 @@
       margin: 4px 0;
     }
 
-    h1 {
-      font-size: 2.2em;
-      margin-bottom: 4px;
+    h1, h2, h3 {
+      margin: 0.5em 0;
     }
 
     h2 {
-      font-size: 1.5em;
-      color: #222;
       margin-top: 40px;
-      margin-bottom: 10px;
       border-bottom: 1px solid #eee;
       padding-bottom: 4px;
     }
 
-    h3 {
-      font-size: 1.2em;
-      margin-top: 30px;
-      color: #333;
-    }
-
     ul {
       padding-left: 20px;
-      margin-top: 10px;
+    }
+
+    .highlight {
+      font-weight: bold;
     }
 
     .meta {
@@ -74,84 +66,194 @@
       font-size: 0.95em;
     }
 
-    .highlight {
-      font-weight: 600;
-      color: #000;
+    .lang-switch {
+      margin-bottom: 20px;
+    }
+
+    .lang-switch button {
+      margin-right: 10px;
+      padding: 6px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #eee;
+    }
+
+    .lang-switch button.active {
+      background-color: #007bff;
+      color: #fff;
     }
   </style>
 </head>
 <body>
 
 <div class="container">
+
+  <div class="lang-switch">
+    <button onclick="switchLang('en')" id="btn-en" class="active">English</button>
+    <button onclick="switchLang('ru')" id="btn-ru">Русский</button>
+  </div>
+
   <div class="header">
     <div class="photo" style="background-image: url('https://github.com/web3pdd/web3pdd.github.io/blob/main/photo_2025-05-12_15-02-38.jpg?raw=true')"></div>
     <div class="info">
-      <h1>Web3 Developer</h1>
+      <h1 id="job-title">Web3 Developer</h1>
       <p><span class="highlight">Name:</span> Pavel Deshevov</p>
       <p><span class="highlight">Email:</span> pavelpal.d@gmail.com</p>
-      <p><span class="highlight">Phone number:</span>+7 905 330 3080</p>
+      <p><span class="highlight">Phone:</span> +7 905 330 3080</p>
       <p><span class="highlight">Github:</span> @pavelgoodpal</p>
       <p><span class="highlight">Orcid:</span> 0000-0001-9884-1913</p>
       <p><span class="highlight">Location:</span> Russia, Moscow</p>
-      <p><span class="highlight">Languages:</span> Russian (native), English (B2 – strong written and verbal skills)</p>
+      <p><span class="highlight">Languages:</span> Russian (native), English
     </div>
   </div>
 
-  <h2>Professional Summary</h2>
-  <p>
-    Experienced Web3 Developer with a strong background in blockchain technologies, cryptographic protocols, and full-stack development. Skilled in building secure and scalable systems using modern Web3 stacks and zero-knowledge proofs. Collaborative, communicative, and committed to exploring emerging technologies.
-  </p>
+  <div id="content-en">
+    <h2>Professional Summary</h2>
+    <p>Experienced Web3 Developer with a strong background in blockchain technologies, cryptographic protocols, and full-stack development. Skilled in building secure and scalable systems using modern Web3 stacks and zero-knowledge proofs. Collaborative, communicative, and committed to exploring emerging technologies</p>
+    <h2>Core Competencies</h2>
+    <ul>
+      <li>Blockchain & Web3 Development</li>
+      <li>Zero-Knowledge Proofs: Circom, Noir, O1JS</li>
+      <li>Smart Contracts: Solidity, Hardhat</li>
+      <li>Full-Stack Development: Node.js, React, TypeScript, Java</li>
+      <li>CI/CD & DevOps: Docker, GitHub Actions, Google Cloud</li>
+      <li>Decentralized Storage: IPFS, Ceramic</li>
+      <li>Crypto wallets: MetaMask, Auro, WalletConnect</li>
+      <li>Databases: PostgreSQL, MongoDB</li>
+      <li>Message brokers: Kafka</li>
+      <li>Cloud platforms: Google Cloud, Yandex Cloud</li>
+    </ul>
 
-  <h2>Core Competencies</h2>
-  <ul>
-    <li>Blockchain & Web3 Development</li>
-    <li>Zero-Knowledge Proofs: Circom, Noir, O1JS</li>
-    <li>Smart Contracts: Solidity, Hardhat</li>
-    <li>Full-Stack Development: Node.js, React, TypeScript</li>
-    <li>CI/CD & DevOps: Docker, GitHub Actions, Google Cloud</li>
-    <li>Decentralized Storage: IPFS, Ceramic</li>
-    <li>Crypto wallets: MetaMask, Auro, WalletConnect</li>
-    <li>Databases: PostgreSQL, MongoDB</li>
-    <li>Message brokers: Kafka</li>
-    <li>Cloud platforms: Google Cloud, Yandex Cloud</li>
-  </ul>
+    <h2>Professional Experience</h2>
 
-  <h2>Professional Experience</h2>
+    <h3>Zkred, LLC — Lead Developer <span class="meta">2023 – 2025</span></h3>
+    <ul>
+      <li>Designed zero-knowledge credential-based authentication protocol</li>
+      <li>Led system architecture and full-stack implementation</li>
+      <li>Built CI/CD pipelines using GitHub and Google Cloud</li>
+      <li><span class="highlight">Achievements:</span> MVP launch, grants from Mina Foundation and Russian Innovation Fund</li>
+      <li><span class="highlight">Tech Stack:</span> TypeScript, Node.js, React, Docker, Git, Solidity, O1JS, Noir</li>
+    </ul>
 
-  <h3>Zkred, LLC — Lead Developer <span class="meta">Jan 2023 – 2025</span></h3>
-  <ul>
-    <li>Designed zero-knowledge credential-based authentication protocol</li>
-    <li>Led system architecture and full-stack implementation</li>
-    <li>Built CI/CD pipelines using GitHub and Google Cloud</li>
-    <li><span class="highlight">Achievements:</span> MVP launch, grants from Mina Foundation and Russian Innovation Fund</li>
-    <li><span class="highlight">Tech Stack:</span> TypeScript, Node.js, React, Docker, Git, Solidity, O1JS, Noir</li>
-  </ul>
+    <h3>Axiomatica, LLC — Backend Developer <span class="meta">2022 – 2023</span></h3>
+    <ul>
+      <li>Developed new system features and API integrations</li>
+      <li>Optimized system latency by 4x</li>
+      <li>Contributed to monolith-to-microservice transition</li>
+      <li><span class="highlight">Tech Stack:</span> Java, Spring Boot, Kafka, Docker, Postgres, Azure</li>
+    </ul>
 
-  <h3>Axiomatica, LLC — Backend Developer <span class="meta">2022 – 2023</span></h3>
-  <ul>
-    <li>Developed new system features and API integrations</li>
-    <li>Optimized system latency by 4x</li>
-    <li>Contributed to monolith-to-microservice transition</li>
-    <li><span class="highlight">Tech Stack:</span> Java, Spring Boot, Kafka, Docker, Postgres, Azure</li>
-  </ul>
+    <h3>RTU MIREA — Lecturer <span class="meta">2024 – 2025</span></h3>
+    <ul>
+      <li>Taught courses in databases, programming, and cross-platform systems</li>
+      <li>Developed educational materials and practical labs</li>
+    </ul>
 
-  <h3>RTU MIREA — Lecturer <span class="meta">2024 – 2025</span></h3>
-  <ul>
-    <li>Taught courses in databases, programming, and cross-platform systems</li>
-    <li>Developed educational materials and practical labs</li>
-  </ul>
+    <h2>Education</h2>
+    <p><strong>Master’s Degree in Electronics and Computer Engineering</strong><br>Volgograd State Technical University (2022 – 2024)</p>
+    <p><strong>Bachelor’s Degree in Chemical Engineering</strong><br>Volgograd State Technical University (2018 – 2022)</p>
 
-  <h2>Education</h2>
-  <p><strong>Master’s Degree in Electronics and Computer Engineering</strong><br>Volgograd State Technical University (2022 – 2024)</p>
-  <p><strong>Bachelor’s Degree in Chemical Engineering</strong><br>Volgograd State Technical University (2018 – 2022)</p>
+    <h2>Additional Information</h2>
+    <ul>
+      <li>Excellent documentation and communication skills</li>
+      <li>Quick learner with a passion for cutting-edge technologies</li>
+      <li>Proactive, responsible, and detail-oriented</li>
+    </ul>
 
-  <h2>Additional Information</h2>
-  <ul>
-    <li>Excellent documentation and communication skills</li>
-    <li>Quick learner with a passion for cutting-edge technologies</li>
-    <li>Proactive, responsible, and detail-oriented</li>
-  </ul>
+  </div>
+
+  <div id="content-ru" style="display: none;">
+    <h2>Краткое профессиональное описание</h2>
+    <p>Опытный Web3-разработчик с сильным техническим бэкграундом в блокчейн-технологиях, криптографических протоколах и full-stack разработке. Умею создавать безопасные и масштабируемые системы, использую современные стек Web3 и технологии доказательств с нулевым разглашением. Коммуникабелен, открыт к новым подходам и постоянно изучаю новейшие технологии.</p>
+    <!-- Full Russian resume content goes here -->
+    <h2>Ключевые компетенции</h2>
+    <ul>
+      <li>Разработка на блокчейне и Web3</li>
+      <li>Zero-Knowledge Proofs: Circom, Noir, O1JS</li>
+      <li>Смарт-контракты: Solidity, Hardhat</li>
+      <li>Full-Stack: Node.js, React, TypeScript, Java</li>
+      <li>CI/CD и DevOps: Docker, GitHub Actions, Google Cloud</li>
+      <li>Децентрализованное хранилище: IPFS, Ceramic, WalletConnect</li>
+      <li>Криптокошельки: MetaMask, Auro, WalletConnect</li>
+      <li>Базы данных: PostgreSQL, MongoDB</li>
+      <li>Обмен сообщениями: Kafka</li>
+      <li>Облачные технологии: Google Cloud, Yandex Cloud</li>
+    </ul>
+
+    <h2>Опыт работы</h2>
+
+    <h3>ООО "Зкред" — Ведущий разработчик <span class="meta">2023 – 2025</span></h3>
+    <ul>
+      <li>Разработка протокола аутентификации на основе удостоверений с нулевым разглашением</li>
+      <li>Проектирование архитектуры и full-stack реализация системы</li>
+      <li>Настройка CI/CD с использованием GitHub и Google Cloud</li>
+      <li><span class="highlight">Достижения:</span> запуск MVP, гранты от Mina Foundation и Фонда содействия инновациям</li>
+      <li><span class="highlight">Стек:</span> TypeScript, Node.js, React, Docker, Git, Solidity, O1JS, Noir</li>
+    </ul>
+
+    <h3>ООО "Аксиоматика" — Backend-разработчик <span class="meta">2022 – 2023</span></h3>
+    <ul>
+      <li>Разработка нового функционала и интеграция с внешними системами</li>
+      <li>Оптимизация производительности системы (уменьшение latency в 4 раза)</li>
+      <li>Участие в переходе от монолита к микросервисной архитектуре</li>
+      <li><span class="highlight">Стек:</span> Java, Spring Boot, Kafka, Docker, PostgreSQL, Azure</li>
+    </ul>
+
+    <h3>РТУ МИРЭА — Преподаватель <span class="meta">2024 – 2025</span></h3>
+    <ul>
+      <li>Преподавание дисциплин: базы данных, методы программирования, кроссплатформенные системы</li>
+      <li>Разработка учебных материалов и практических занятий</li>
+    </ul>
+
+    <h2>Образование</h2>
+    <p><strong>Магистратура: Электроника и вычислительная техника</strong><br>Волгоградский государственный технический университет (2022 – 2024)</p>
+    <p><strong>Бакалавриат: Химическая технология</strong><br>Волгоградский государственный технический университет (2018 – 2022)</p>
+
+    <h2>Дополнительная информация</h2>
+    <ul>
+      <li>Отличные навыки написания документации и технического общения</li>
+      <li>Быстро осваиваю новые технологии, интересуюсь современными подходами</li>
+      <li>Ответственный, внимательный к деталям, умею работать в команде</li>
+    </ul>
+
+  </div>
+
 </div>
+
+<script>
+  const nameEl = document.getElementById('name');
+  const locationEl = document.getElementById('location');
+  const languagesEl = document.getElementById('languages');
+  const titleEl = document.getElementById('job-title');
+
+  function switchLang(lang) {
+    const en = document.getElementById('content-en');
+    const ru = document.getElementById('content-ru');
+    const btnEn = document.getElementById('btn-en');
+    const btnRu = document.getElementById('btn-ru');
+
+    if (lang === 'en') {
+      en.style.display = 'block';
+      ru.style.display = 'none';
+      btnEn.classList.add('active');
+      btnRu.classList.remove('active');
+      titleEl.textContent = 'Web3 Developer';
+      nameEl.innerHTML = "<p><span class='highlight'>Name:</span> Pavel Deshevov</p>";
+      locationEl.innerHTML = "<span class='highlight'>Location:</span> Moscow, Russia";
+      languagesEl.innerHTML = "<span class='highlight'>Languages:</span> Russian (native), English (B2)";
+    } else {
+      en.style.display = 'none';
+      ru.style.display = 'block';
+      btnEn.classList.remove('active');
+      btnRu.classList.add('active');
+      titleEl.textContent = 'Web3 Разработчик';
+      nameEl.innerHTML = "<p><span class='highlight'>Имя:</span> Павел Дешевов</p>";
+      locationEl.innerHTML = "<span class='highlight'>Город:</span> Москва, Россия";
+      languagesEl.innerHTML = "<span class='highlight'>Языки:</span> Русский (родной), Английский (B2)";
+    }
+  }
+</script>
 
 </body>
 </html>
