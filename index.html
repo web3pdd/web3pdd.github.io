@@ -124,13 +124,13 @@
     <div class="photo" style="background-image: url('https://github.com/web3pdd/web3pdd.github.io/blob/main/photo_2025-05-12_15-02-38.jpg?raw=true')"></div>
     <div class="info">
       <h1 id="job-title">Web3 Developer</h1>
-      <p><span class="highlight">Name:</span> Pavel Deshevov</p>
+      <p id="name" ><span class="highlight">Name:</span> Pavel Deshevov</p>
       <p><span class="highlight">Email:</span> pavelpal.d@gmail.com</p>
       <p><span class="highlight">Phone:</span> +7 905 330 3080</p>
       <p><span class="highlight">Github:</span> @pavelgoodpal</p>
       <p><span class="highlight">Orcid:</span> 0000-0001-9884-1913</p>
-      <p><span class="highlight">Location:</span> Russia, Moscow</p>
-      <p><span class="highlight">Languages:</span> Russian (native), English
+      <p id="location"><span class="highlight">Location:</span> Russia, Moscow</p>
+      <p id="languages"><span class="highlight">Languages:</span> Russian (native), English
     </div>
   </div>
 
@@ -265,12 +265,18 @@
       btnEn.classList.add('active');
       btnRu.classList.remove('active');
       titleEl.textContent = 'Web3 Developer';
+      nameEl.innerHTML = "<span class='highlight'>Name:</span> Pavel Deshevov";
+      locationEl.innerHTML = "<span class='highlight'>Location:</span> Moscow, Russia";
+      languagesEl.innerHTML = "<span class='highlight'>Languages:</span> Russian (native), English (B2)"
     } else {
       en.style.display = 'none';
       ru.style.display = 'block';
       btnEn.classList.remove('active');
       btnRu.classList.add('active');
       titleEl.textContent = 'Web3 Разработчик';
+      nameEl.innerHTML = "<span class='highlight'>Имя:</span> Павел Дешевов";
+      locationEl.innerHTML = "<span class='highlight'>Город:</span> Москва, Россия";
+      languagesEl.innerHTML = "<span class='highlight'>Языки:</span> Русский (родной), Английский (B2)";
     }
   }
 </script>
